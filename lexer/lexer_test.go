@@ -4,12 +4,12 @@ import(
 	"monkey/token"
 )
 func TestNextToken(t *testing.T){
-	input:=`=+(){},a;`
+	input:=`=+(){},;`
 	tests:= []struct{
 		expectedType token.TokenType
 		expectedLiteral string
 	}{
-		{token.ASSIGN,"="},
+		{token.ASSIGN, "="},
 		{token.PLUS, "+"},
 		{token.LPAREN, "("},
 		{token.RPAREN, ")"},
